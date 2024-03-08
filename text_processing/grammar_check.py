@@ -9,7 +9,7 @@ load_dotenv()
 api_key = os.getenv("OPENAI_API_KEY")
 openai.api_key = api_key
 
-def generar_recetas(sentence):
+def grammar_check_sentence(sentence):
     modelo = "gpt-3.5-turbo"
     respuesta_recetas = openai.ChatCompletion.create(
         model=modelo,
@@ -33,4 +33,4 @@ def generar_recetas(sentence):
 #Ejemplo de uso
 while True:
     sentence = input("\nSentence: ")
-    print(generar_recetas(sentence))
+    print(grammar_check_sentence(sentence))
