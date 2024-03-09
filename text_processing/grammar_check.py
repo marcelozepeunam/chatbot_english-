@@ -11,7 +11,7 @@ openai.api_key = api_key
 
 def grammar_check_sentence(sentence):
     modelo = "gpt-3.5-turbo"
-    respuesta_recetas = openai.ChatCompletion.create(
+    respuesta = openai.ChatCompletion.create(
         model=modelo,
         messages=[
             {"role": "system", "content": '''Actua como experto en gramática de inglés.
@@ -28,7 +28,7 @@ def grammar_check_sentence(sentence):
         ]
     )
 
-    return respuesta_recetas.choices[0].message['content']
+    return respuesta.choices[0].message['content']
 
 #Ejemplo de uso
 while True:
