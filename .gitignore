@@ -1,0 +1,14 @@
+#Files
+venv/
+pychache/
+
+#API keys
+.env
+
+# Archivos de caché y compilados
+*.pyc
+__pycache__/
+
+# Archivos temporales y de respaldo
+*.tmp
+*.log
