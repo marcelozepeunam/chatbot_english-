@@ -1,5 +1,3 @@
-#grammar_check.py
-
 import openai
 
 def detect_grammatical_error(incoming_msg):
